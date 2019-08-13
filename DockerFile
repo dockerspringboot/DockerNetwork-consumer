@@ -1,0 +1,6 @@
+FROM java:8
+WORKDIR /
+ADD ./target/DockerNetwork-consumer-0.0.1-SNAPSHOT.jar DockerNetwork-consumer-0.0.1-SNAPSHOT.jar
+#Below is the Outside port
+EXPOSE 8750 
+CMD java -jar DockerNetwork-consumer-0.0.1-SNAPSHOT.jar

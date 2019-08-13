@@ -1,0 +1,19 @@
+version: "3"
+services:
+  consumer:
+    image: consumer
+    ports:
+      - "8750:8700"
+    networks:
+      - producer-consumer
+    depends_on:
+      - producer
+ 
+  producer:
+    image: producer
+    ports:
+      - "8550:8500"
+    networks:
+      - producer-consumer
+networks:
+  producer-consumer:
